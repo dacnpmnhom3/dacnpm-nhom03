@@ -7,7 +7,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import PulseLoader from 'react-spinners/PulseLoader';
 import { useNavigate } from 'react-router-dom';
 import { useDebounce } from 'hooks/debounceHook';
-import { SearchProduct } from './SearchProduct/searchProduct';
+import { RecommendProduct } from './RecommendProduct/recommendProduct';
 import productApi from 'apis/productApi';
 import Highlighter from 'react-highlight-words';
 
@@ -41,7 +41,7 @@ const SubMenu = styled(motion.div)`
   background-color: white;
   border-radius: 6px;
   transform-origin: 50% -30px;
-  min-width: 60em;
+  min-width: 30em;
   color: black;
   overflow-y: auto;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -62,11 +62,12 @@ const WarningMessage = styled.span`
 `;
 
 const KeyWords = styled.div`
-  margin-right: auto;
+  margin-right: 5em;
 `;
 
 const Italic = styled.span`
   font-style: italic;
+  font-weight: 600;
 `;
 
 const WordStyle = styled.div`
@@ -275,7 +276,7 @@ const SearchBar = () => {
               {words.map((word) => (
                 <WordStyle
                   key={word._id}
-                  onClick={() => keyClickHandler(word.title)}
+                  onClick={() => keyClickHandler(word.name)}
                 >
                   <Highlighter
                     highlightStyle={{
@@ -283,7 +284,7 @@ const SearchBar = () => {
                       fontWeight: 'bold',
                     }}
                     searchWords={[searchQuery]}
-                    textToHighlight={word.title}
+                    textToHighlight={word.name}
                   />
                 </WordStyle>
               ))}
@@ -291,11 +292,10 @@ const SearchBar = () => {
             <div className='recommend'>
               <Italic>Recommend</Italic>
               {product.map((prod) => (
-                <SearchProduct
+                <RecommendProduct
                   key={prod._id}
-                  imgsrc={prod.img}
-                  name={prod.title}
-                  price={prod.price}
+                  imgsrc={prod.thumbnail}
+                  name={prod.name}
                   choose={() => chooseHandler(prod._id)}
                 />
               ))}

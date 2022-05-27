@@ -36,20 +36,13 @@ const ProductName = styled.h4`
   margin-right: 5px;
 `;
 
-const Price = styled.span`
-  color: red;
-  font-size: 12px;
-  margin-left: auto;
-`;
-
-export function SearchProduct(props) {
+export function RecommendProduct(props) {
   return (
     <ProductContainer onClick={props.choose}>
       <ProductImg>
         <img src={props.imgsrc} />
       </ProductImg>
       <ProductName>{props.name}</ProductName>
-      <Price>${props.price}</Price>
     </ProductContainer>
   );
 }
