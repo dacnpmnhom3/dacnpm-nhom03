@@ -4,8 +4,7 @@ import { CircularProgress, Container, Stack } from '@mui/material';
 
 import Header from 'components/Header';
 import GroupProductsSlide from 'components/GroupProductsSlide';
-import axiosClient from 'apis';
-
+import productApi from 'apis/productApi';
 const HomePage = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [listProduct, setListProduct] = useState(null);
@@ -14,7 +13,7 @@ const HomePage = () => {
     const getListProduct = async () => {
       try {
         setIsLoading(true);
-        const response = await axiosClient.get(`api/products`);
+        const response = await productApi.getAll();
 
         if (response.status === 200) {
           setIsLoading(false);

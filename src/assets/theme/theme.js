@@ -10,6 +10,12 @@ const theme = createTheme({
       dark: '#F2F7F8',
       contrastText: '#0F5B9A',
     },
+    warning: {
+      light: '#ffbd45',
+      main: '#fb8c00',
+      dark: '#c25e00',
+      contrastText: '#fff',
+    },
   },
   typography: {
     button: {

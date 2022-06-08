@@ -2,7 +2,7 @@ import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles({
   root: {
-    width: '100%',
+    // width: '100%',
     padding: '8px',
     textAlign: 'center',
     '&:hover': {

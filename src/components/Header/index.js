@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { Box, Container, Grid, IconButton, Paper } from '@mui/material';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
@@ -9,9 +10,17 @@ import MenuIcon from '@mui/icons-material/Menu';
 import SearchBar from './components/SearchBar';
 import Account from './components/Account';
 
+import { Routes } from 'routes';
+
 const Header = () => {
   const theme = useTheme();
+  const navigate = useNavigate();
   const matchUpSm = useMediaQuery(theme.breakpoints.up('sm'));
+
+  const handleRedirectHomepage = useCallback(() => {
+    navigate(Routes.home.path);
+  }, []);
+
   return (
     <Paper square elevation={3}>
       <Box
@@ -37,10 +46,10 @@ const Header = () => {
       >
         <Grid
           container
-          columnSpacing={{ xs: 0, sm: 2 }}
-          rowSpacing={{ xs: 1, sm: 0 }}
           alignItems='center'
           justifyContent='flex-start'
+          rowSpacing={{ xs: 1, sm: 0 }}
+          columnSpacing={{ xs: 0, sm: 2 }}
         >
           {!matchUpSm && (
             <Grid item xs={2} sm={1} textAlign='left'>
@@ -49,7 +58,13 @@ const Header = () => {
               </IconButton>
             </Grid>
           )}
-          <Grid item xs={3} sm={2}>
+          <Grid
+            item
+            xs={3}
+            sm={2}
+            sx={{ cursor: ' pointer' }}
+            onClick={handleRedirectHomepage}
+          >
             <img
               src='https://c1.neweggimages.com/WebResource/Themes/Nest/logos/Newegg_full_color_logo_RGB.SVG'
               alt='newegg-logo'
@@ -67,7 +82,7 @@ const Header = () => {
           </Grid>
           {matchUpSm && (
             <Grid item xs={2} sm={1} textAlign='right'>
-              <IconButton>
+              <IconButton color='primary'>
                 <ShoppingCartOutlinedIcon fontSize='large' />
               </IconButton>
             </Grid>

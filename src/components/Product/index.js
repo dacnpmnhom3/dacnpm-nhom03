@@ -1,8 +1,11 @@
 import React from 'react';
 
-import { Paper, Typography } from '@mui/material';
+import { Paper, Typography, Grid, IconButton } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+
+import PriceFormat from 'components/PriceFormat';
 
 import useStyles from './style';
 
@@ -26,11 +29,21 @@ const Product = ({ productInfo }) => {
       <Typography className={classes.productName}>
         {productInfo.name}
       </Typography>
-
-      <Typography className={classes.discountPrice}>
-        {productInfo.price}
-      </Typography>
-      <Typography className={classes.price}>{productInfo.price}</Typography>
+      <Grid container justifyContent={'space-between'}>
+        <Grid item>
+          <Typography className={classes.discountPrice} component='div'>
+            <PriceFormat price={productInfo.price} />
+          </Typography>
+          <Typography className={classes.price} component='div'>
+            <PriceFormat price={productInfo.price} />
+          </Typography>
+        </Grid>
+        <Grid item>
+          <IconButton color='primary'>
+            <ShoppingCartOutlinedIcon fontSize='large' />
+          </IconButton>
+        </Grid>
+      </Grid>
     </Paper>
   );
 };
