@@ -5,6 +5,7 @@ import HomePage from 'pages/HomePage';
 import SignInPage from 'pages/SignInPage';
 import SignUpPage from 'pages/SignUpPage';
 import ProductList from 'pages/ProductList';
+import CheckoutCart from 'pages/CheckoutCart';
 import PaymentPage from 'pages/PaymentPage';
 import ProductDetail from 'pages/ProductDetail';
 import CartDetail from 'pages/CartDetail';
@@ -39,6 +40,10 @@ export const Routes = {
         element: DefaultComponent,
       },
     },
+  },
+  checkout: {
+    path: '/checkout',
+    element: CheckoutCart,
   },
   ProductDetail: {
     path: '/detail/:productId',

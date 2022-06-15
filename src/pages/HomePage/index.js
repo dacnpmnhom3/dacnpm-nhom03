@@ -22,6 +22,7 @@ const HomePage = () => {
           const groupProducts = [];
 
           groupProductsName.forEach((name) => {
+            console.log({name});
             groupProducts.push({
               groupName: name,
               products: [...data[name], ...data[name]],

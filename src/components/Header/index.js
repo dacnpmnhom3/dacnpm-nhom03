@@ -82,7 +82,7 @@ const Header = () => {
           </Grid>
           {matchUpSm && (
             <Grid item xs={2} sm={1} textAlign='right'>
-              <IconButton color='primary'>
+              <IconButton color='primary' href="/checkout">
                 <ShoppingCartOutlinedIcon fontSize='large' />
               </IconButton>
             </Grid>
