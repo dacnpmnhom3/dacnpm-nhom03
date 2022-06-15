@@ -25,7 +25,7 @@ import PriceFormat from 'components/PriceFormat';
 import React from 'react';
 import { useState, useEffect } from 'react';
 import ImagesCarousel from './imageCarousel';
-import axiosClient from 'apis';
+import { axiosClient } from 'apis';
 import { useDispatch, useSelector } from 'react-redux';
 import { setErrorMsg, setSuccessMsg } from 'store/alert';
 import { Routes } from 'routes';
