@@ -13,7 +13,7 @@ import {
   Card,
 } from '@mui/material';
 
-import axiosClient from 'apis';
+import { axiosClient } from 'apis';
 
 import Header from 'components/Header';
 

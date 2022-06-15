@@ -1,0 +1,248 @@
+[{
+  "_id": {
+    "$oid": "6287d5837f894b147b8d6056"
+  },
+  "user_id": 1,
+  "total": 3672000,
+  "payment_detail_id": 1,
+  "shipper_id": {
+    "$oid": "6283a325f6c8e4b6743480d1"
+  },
+  "ship_date": {
+    "$date": {
+      "$numberLong": "1653229224103"
+    }
+  },
+  "receiver_address": "10 NVC, P.5, Q.5, TP.HCM",
+  "receiver_name": "Hưng",
+  "receiver_phone": "0559338233",
+  "status": "pending",
+  "items": [
+    {
+      "product_id": "62879482e5fc83d4bb416ec0",
+      "product_variation_id": "62879482e5fc83d4bb416ec9",
+      "quantity": 1,
+      "price": 480000,
+      "discount_id": null,
+      "total": 480000,
+      "_id": "6287d5837f894b147b8d6057"
+      
+    },
+    {
+      "product_id":  "6287869fe5fc83d4bb416eaa",
+      "product_variation_id": "6287869fe5fc83d4bb416ebe",
+      "quantity": 1,
+      "price": 3990000,
+      "discount_id": "6283a996ee556881d3d58763"
+      ,
+      "total": 3192000,
+      "_id":  "6287d5837f894b147b8d6058"
+      
+    }
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1653069187103"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1653069187103"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6287d7b07f894b147b8d605d"
+  },
+  "user_id": 2,
+  "total": 27157500,
+  "payment_detail_id": 2,
+  "shipper_id": {
+    "$oid": "6283a3fcf6c8e4b6743480d3"
+  },
+  "ship_date": {
+    "$date": {
+      "$numberLong": "1653056424103"
+    }
+  },
+  "receiver_address": "25 Nguyễn Bỉnh Khiêm, P.3, Q.1, TP.HCM",
+  "receiver_name": "Anh Tú",
+  "receiver_phone": "0896946246",
+  "status": "verified",
+  "items": [
+    {
+      "product_id": {
+        "$oid": "62877c66e5fc83d4bb416dca"
+      },
+      "product_variation_id": {
+        "$oid": "62877c66e5fc83d4bb416de1"
+      },
+      "quantity": 1,
+      "price": 30990000,
+      "discount_id": {
+        "$oid": "6283aa10ee556881d3d58765"
+      },
+      "total": 26341500,
+      "_id": {
+        "$oid": "6287d7b07f894b147b8d605e"
+      }
+    },
+    {
+      "product_id": {
+        "$oid": "62879482e5fc83d4bb416ec0"
+      },
+      "product_variation_id": {
+        "$oid": "62879482e5fc83d4bb416ec9"
+      },
+      "quantity": 2,
+      "price": 480000,
+      "discount_id": {
+        "$oid": "6283aa10ee556881d3d58765"
+      },
+      "total": 816000,
+      "_id": {
+        "$oid": "6287d7b07f894b147b8d605f"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1653069744043"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1653069744043"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6287d9477f894b147b8d6061"
+  },
+  "user_id": 3,
+  "total": 37793000,
+  "payment_detail_id": 3,
+  "shipper_id": {
+    "$oid": "6283a473f6c8e4b6743480d5"
+  },
+  "ship_date": {
+    "$date": {
+      "$numberLong": "1652970024103"
+    }
+  },
+  "receiver_address": "25 Hùng Vương, P.2, Q.5, TP.HCM",
+  "receiver_name": "anh Nam",
+  "receiver_phone": "059257321",
+  "status": "verified",
+  "items": [
+    {
+      "product_id": {
+        "$oid": "6287839be5fc83d4bb416e74"
+      },
+      "product_variation_id": {
+        "$oid": "6287839be5fc83d4bb416e91"
+      },
+      "quantity": 1,
+      "price": 53990000,
+      "discount_id": {
+        "$oid": "6283aa5cee556881d3d58767"
+      },
+      "total": 37793000,
+      "_id": {
+        "$oid": "6287d9477f894b147b8d6062"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1653070151075"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1653070151075"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6287db387f894b147b8d6064"
+  },
+  "user_id": 4,
+  "total": 26163000,
+  "payment_detail_id": 4,
+  "shipper_id": {
+    "$oid": "6283a518f6c8e4b6743480d7"
+  },
+  "ship_date": {
+    "$date": {
+      "$numberLong": "1652970024103"
+    }
+  },
+  "receiver_address": "22 Trương Định, P.6, Q.3, Thành phố Hồ Chí Minh",
+  "receiver_name": "chị Trang",
+  "receiver_phone": "0795265505",
+  "status": "verified",
+  "items": [
+    {
+      "product_id": {
+        "$oid": "62877c66e5fc83d4bb416dca"
+      },
+      "product_variation_id": {
+        "$oid": "62877c66e5fc83d4bb416dea"
+      },
+      "quantity": 1,
+      "price": 30990000,
+      "discount_id": {
+        "$oid": "6283ab1cee556881d3d58769"
+      },
+      "total": 21693000,
+      "_id": {
+        "$oid": "6287db387f894b147b8d6065"
+      }
+    },
+    {
+      "product_id": {
+        "$oid": "62879482e5fc83d4bb416ec0"
+      },
+      "product_variation_id": {
+        "$oid": "62879482e5fc83d4bb416ec9"
+      },
+      "quantity": 1,
+      "price": 480000,
+      "discount_id": null,
+      "total": 480000,
+      "_id": {
+        "$oid": "6287db387f894b147b8d6066"
+      }
+    },
+    {
+      "product_id": {
+        "$oid": "6287869fe5fc83d4bb416eaa"
+      },
+      "product_variation_id": {
+        "$oid": "6287869fe5fc83d4bb416ebe"
+      },
+      "quantity": 1,
+      "price": 3990000,
+      "discount_id": null,
+      "total": 3990000,
+      "_id": {
+        "$oid": "6287db387f894b147b8d6067"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1653070648880"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1653070648880"
+    }
+  },
+  "__v": 0
+}]
