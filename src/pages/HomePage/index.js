@@ -17,12 +17,13 @@ const HomePage = () => {
 
         if (response.status === 200) {
           setIsLoading(false);
+
           const data = response.data.data;
+          console.log(data);
           const groupProductsName = Object.keys(data);
           const groupProducts = [];
 
           groupProductsName.forEach((name) => {
-            console.log({name});
             groupProducts.push({
               groupName: name,
               products: [...data[name], ...data[name]],
