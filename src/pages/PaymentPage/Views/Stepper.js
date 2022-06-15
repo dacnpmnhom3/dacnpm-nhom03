@@ -18,23 +18,13 @@ import StepperIcons from './StepperIcons';
 import ProductList from './Forms/ProductList';
 import PaymentForm from './Forms/PaymentForm';
 import ServiceForm from './Forms/ServiceForm';
-import {
-  useStripe,
-  useElements,
-  CardCvcElement,
-} from '@stripe/react-stripe-js';
+// import { useStripe, useElements } from '@stripe/react-stripe-js';
 import { useStateValue } from '../StateContext';
 import StepConnector from './StepConnector';
-import {
-  clientSecretPull,
-  stripeDataObjectConverter,
-  clientSecretDataObjectConverter,
-} from '../constants/functions';
 
 import MomoModal from './Modal/MomoModal';
 import paymentApi from 'apis/paymentApi';
 import mock from '../mock/order.json';
-import { Link } from 'react-router-dom';
 
 // OVERALL STYLE
 const style = makeStyles((theme) => ({
@@ -83,9 +73,9 @@ const Steppers = () => {
   const [cardStatus, setCardStatus] = useState(true);
   const [cardMessage, setCardMessage] = useState('');
 
-  const stripe = useStripe();
-  const elements = useElements();
-  let [{ formValues }, dispatch] = useStateValue();
+  // const stripe = useStripe();
+  // const elements = useElements();
+  let [{ formValues }] = useStateValue();
 
   const [openMomoModal, setOpenMomoModal] = useState(false);
 

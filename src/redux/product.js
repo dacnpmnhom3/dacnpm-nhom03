@@ -1,16 +1,16 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   selectedCategory: {
-    label: "",
-    value: "",
+    label: '',
+    value: '',
     product_variations: [],
     properties: [],
   },
 };
 
 export const productSlice = createSlice({
-  name: "product",
+  name: 'product',
   initialState,
   reducers: {
     setSelectedCategory: (state, action) => {

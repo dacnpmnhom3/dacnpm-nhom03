@@ -1,15 +1,15 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   isError: false,
   isSuccess: false,
-  errorMsg: "",
-  successMsg: "",
-  errorKey: "",
-  successKey: "",
+  errorMsg: '',
+  successMsg: '',
+  errorKey: '',
+  successKey: '',
 };
 export const alertSlice = createSlice({
-  name: "alert",
+  name: 'alert',
   initialState,
   reducers: {
     setIsError: (state, action) => {

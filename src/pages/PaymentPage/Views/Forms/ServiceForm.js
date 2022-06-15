@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import { TextField, Grid, Typography } from '@material-ui/core';
 import { useStateValue } from '../../StateContext';
-import { Autocomplete } from '@material-ui/lab';
 
 const ServiceForm = () => {
   const [{ formValues }, dispatch] = useStateValue();
 
+  // eslint-disable-next-line no-unused-vars
   const [provinces, setProvinces] = React.useState([]);
 
   useEffect(() => {

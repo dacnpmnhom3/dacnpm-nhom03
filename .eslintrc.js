@@ -19,6 +19,7 @@ module.exports = {
     'react/prop-types': 0,
     'linebreak-style': ['off', 'windows'],
     'arrow-body-style': 'off',
+    'react/display-name': 'off',
     'prefer-arrow-callback': 'off',
     'prettier/prettier': [
       'error',

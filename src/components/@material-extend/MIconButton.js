@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { forwardRef } from 'react';
+import React, { forwardRef } from 'react';
 // material
 import { IconButton } from '@mui/material';
 //
@@ -16,7 +16,7 @@ const MIconButton = forwardRef(({ children, ...other }, ref) => (
 ));
 
 MIconButton.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
 };
 
 export default MIconButton;

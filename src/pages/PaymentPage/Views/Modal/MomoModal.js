@@ -3,21 +3,19 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import { Grid } from '@mui/material';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 const style = {
   position: 'absolute',
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: 400,
+  // width: 400,
   // border: '2px solid #000',
   width: '80%',
   boxShadow: 24,
   p: 4,
   zIndex: 1000,
 };
-
-const styles = {};
 
 const MomoModal = ({ open, handleClose, formValues, handleTimeout }) => {
   let [time, setTime] = useState(60);
