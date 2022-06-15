@@ -21,7 +21,7 @@ axios.interceptors.response.use(
 );
 
 const userAxios = axios.create({
-  baseURL: process.env.REACT_USER_SERVER_URL,
+  baseURL: process.env.REACT_USER_SERVER_URL2,
 });
 
 userAxios.interceptors.request.use(
