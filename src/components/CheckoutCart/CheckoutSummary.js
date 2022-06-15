@@ -1,3 +1,4 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Icon } from '@iconify/react';
 import editFill from '@iconify/icons-eva/edit-fill';
@@ -12,7 +13,7 @@ import {
   CardHeader,
   Typography,
   CardContent,
-  InputAdornment
+  InputAdornment,
 } from '@mui/material';
 // utils
 import { fCurrency } from '../../utils/formatNumber';
@@ -27,7 +28,7 @@ CheckoutSummary.propTypes = {
   onEdit: PropTypes.func,
   enableEdit: PropTypes.bool,
   onApplyDiscount: PropTypes.func,
-  enableDiscount: PropTypes.bool
+  enableDiscount: PropTypes.bool,
 };
 
 export default function CheckoutSummary({
@@ -38,18 +39,21 @@ export default function CheckoutSummary({
   shipping = null,
   onApplyDiscount,
   enableEdit = false,
-  enableDiscount = false
+  enableDiscount = false,
 }) {
   const displayShipping = shipping !== null ? 'Free' : '-';
 
   return (
     <Card sx={{ my: 3 }}>
       <CardHeader
-        title="Order Summary"
+        title='Order Summary'
         action={
           enableEdit && (
-            <Button size="small" type="button" onClick={onEdit} 
-            startIcon={<Icon icon={editFill} />}
+            <Button
+              size='small'
+              type='button'
+              onClick={onEdit}
+              startIcon={<Icon icon={editFill} />}
             >
               Edit
             </Button>
@@ -59,36 +63,40 @@ export default function CheckoutSummary({
 
       <CardContent>
         <Stack spacing={2}>
-          <Stack direction="row" justifyContent="space-between">
-            <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+          <Stack direction='row' justifyContent='space-between'>
+            <Typography variant='body2' sx={{ color: 'text.secondary' }}>
               Sub Total
             </Typography>
-            <Typography variant="subtitle2">{fCurrency(subtotal)}</Typography>
+            <Typography variant='subtitle2'>{fCurrency(subtotal)}</Typography>
           </Stack>
 
-          <Stack direction="row" justifyContent="space-between">
-            <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+          <Stack direction='row' justifyContent='space-between'>
+            <Typography variant='body2' sx={{ color: 'text.secondary' }}>
               Discount
             </Typography>
-            <Typography variant="subtitle2">{discount ? fCurrency(-discount) : '-'}</Typography>
+            <Typography variant='subtitle2'>
+              {discount ? fCurrency(-discount) : '-'}
+            </Typography>
           </Stack>
 
-          <Stack direction="row" justifyContent="space-between">
-            <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+          <Stack direction='row' justifyContent='space-between'>
+            <Typography variant='body2' sx={{ color: 'text.secondary' }}>
               Shipping
             </Typography>
-            <Typography variant="subtitle2">{shipping ? fCurrency(shipping) : displayShipping}</Typography>
+            <Typography variant='subtitle2'>
+              {shipping ? fCurrency(shipping) : displayShipping}
+            </Typography>
           </Stack>
 
           <Divider />
 
-          <Stack direction="row" justifyContent="space-between">
-            <Typography variant="subtitle1">Total</Typography>
+          <Stack direction='row' justifyContent='space-between'>
+            <Typography variant='subtitle1'>Total</Typography>
             <Box sx={{ textAlign: 'right' }}>
-              <Typography variant="subtitle1" sx={{ color: 'error.main' }}>
+              <Typography variant='subtitle1' sx={{ color: 'error.main' }}>
                 {fCurrency(total)}
               </Typography>
-              <Typography variant="caption" sx={{ fontStyle: 'italic' }}>
+              <Typography variant='caption' sx={{ fontStyle: 'italic' }}>
                 (VAT included if applicable)
               </Typography>
             </Box>
@@ -97,16 +105,20 @@ export default function CheckoutSummary({
           {enableDiscount && (
             <TextField
               fullWidth
-              placeholder="Discount codes / Gifts"
-              value="DISCOUNT5"
+              placeholder='Discount codes / Gifts'
+              value='DISCOUNT5'
               InputProps={{
                 endAdornment: (
-                  <InputAdornment position="end">
-                    <Button type="button" onClick={() => onApplyDiscount(5)} sx={{ mr: -0.5 }}>
+                  <InputAdornment position='end'>
+                    <Button
+                      type='button'
+                      onClick={() => onApplyDiscount(5)}
+                      sx={{ mr: -0.5 }}
+                    >
                       Apply
                     </Button>
                   </InputAdornment>
-                )
+                ),
               }}
             />
           )}

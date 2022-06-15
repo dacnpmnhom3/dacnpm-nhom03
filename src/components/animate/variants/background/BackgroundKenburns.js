@@ -2,7 +2,7 @@
 
 const TRANSITION = {
   duration: 5,
-  ease: 'easeOut'
+  ease: 'easeOut',
 };
 
 export const varKenburnsTop = {
@@ -10,8 +10,8 @@ export const varKenburnsTop = {
     scale: [1, 1.25],
     y: [0, -15],
     transformOrigin: ['50% 16%', 'top'],
-    transition: TRANSITION
-  }
+    transition: TRANSITION,
+  },
 };
 
 export const varKenburnsBottom = {
@@ -19,8 +19,8 @@ export const varKenburnsBottom = {
     scale: [1, 1.25],
     y: [0, 15],
     transformOrigin: ['50% 84%', 'bottom'],
-    transition: TRANSITION
-  }
+    transition: TRANSITION,
+  },
 };
 
 export const varKenburnsLeft = {
@@ -29,8 +29,8 @@ export const varKenburnsLeft = {
     x: [0, -20],
     y: [0, 15],
     transformOrigin: ['16% 50%', 'left'],
-    transition: TRANSITION
-  }
+    transition: TRANSITION,
+  },
 };
 
 export const varKenburnsRight = {
@@ -39,6 +39,6 @@ export const varKenburnsRight = {
     x: [0, 20],
     y: [0, -15],
     transformOrigin: ['84% 50%', 'right'],
-    transition: TRANSITION
-  }
+    transition: TRANSITION,
+  },
 };

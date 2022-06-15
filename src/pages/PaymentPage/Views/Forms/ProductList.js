@@ -1,10 +1,9 @@
-import React, { useEffect } from 'react';
-import { TextField, Grid, Typography } from '@material-ui/core';
-import Autocomplete from '@material-ui/lab/Autocomplete';
+import React from 'react';
+import { Grid, Typography } from '@material-ui/core';
 import { useStateValue } from '../../StateContext';
 
 const ProductList = () => {
-  const [{ formValues }, dispatch] = useStateValue();
+  const [{ formValues }] = useStateValue();
 
   console.log({ formValues });
 
@@ -16,15 +15,16 @@ const ProductList = () => {
       <Grid item xs={12}>
         <ul>
           {formValues.items != null &&
-            formValues.items.map((product) => {
+            formValues.items.map((product, index) => {
               return (
-                <li>
-                  {product.name +
+                <li key={index}>
+                  {/* {product.name +
                     ' - ' +
                     product.price +
                     '*' +
                     product.quantity}{' '}
-                  + " = " + {product.total}
+                  + " = " + {product.total} */}
+                  {`${product.name} - ${product.price} * ${product.quantity} = ${product.total}`}
                 </li>
               );
             })}

@@ -1,4 +1,4 @@
-import userAxios from './index';
+import { userAxios } from './index';
 
 const userApi = {
   getAll: (params) => {

@@ -1,8 +1,11 @@
-import { useDispatch as useReduxDispatch, useSelector as useReduxSelector } from "react-redux";
-import { configureStore } from "@reduxjs/toolkit";
+import {
+  useDispatch as useReduxDispatch,
+  useSelector as useReduxSelector,
+} from 'react-redux';
+import { configureStore } from '@reduxjs/toolkit';
 
-import alertReducer from "./alert";
-import productReducer from "./product";
+import alertReducer from './alert';
+import productReducer from './product';
 
 export const store = configureStore({
   reducer: {
