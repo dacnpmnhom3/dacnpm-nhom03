@@ -17,7 +17,7 @@ const Product = ({ productInfo }) => {
   return (
     <Paper elevation={3} className={classes.root}>
       <img
-        src={productInfo.thumbnail}
+        src={productInfo.thumbnails}
         alt={productInfo.name}
         className={classes.thumbnail}
         style={{
