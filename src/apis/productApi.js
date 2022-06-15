@@ -1,4 +1,4 @@
-import axiosClient from './index';
+import { axiosClient } from './index';
 
 const productApi = {
   getAll: (params) => {

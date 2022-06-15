@@ -19,4 +19,18 @@ axios.interceptors.response.use(
     throw error;
   },
 );
-export default axiosClient;
+
+const userAxios = axios.create({
+  baseURL: process.env.REACT_USER_SERVER_URL,
+});
+
+userAxios.interceptors.request.use(
+  (config) => {
+    return config;
+  },
+  (error) => {
+    throw error;
+  },
+);
+
+export { axiosClient, userAxios };

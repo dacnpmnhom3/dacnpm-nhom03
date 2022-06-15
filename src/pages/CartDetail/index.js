@@ -14,7 +14,7 @@ import {
   CardContent,
 } from '@mui/material';
 import Header from 'components/Header';
-import axiosClient from 'apis';
+import { axiosClient } from 'apis';
 const CartDetail = () => {
   const [isLoading, setIsLoading] = useState(false);
   // eslint-disable-next-line no-unused-vars

@@ -15,7 +15,7 @@ import { grey } from '@mui/material/colors';
 import { useTheme } from '@mui/material/styles';
 import FilterListIcon from '@mui/icons-material/FilterList';
 
-import axiosClient from 'apis';
+import { axiosClient } from 'apis';
 
 import Header from 'components/Header';
 import Product from 'components/Product';
